@@ -183,6 +183,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\RegraDeNegocioExceptionExtension.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -191,6 +192,9 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BaseVM.cs" />
+    <Compile Include="ViewModels\UsuarioLoginVM.cs" />
+    <Compile Include="ViewModels\UsuarioVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\animate.delay.css" />
@@ -516,7 +520,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -525,6 +528,14 @@
     <ProjectReference Include="..\SupplyManager.Comum\SupplyManager.Comum.csproj">
       <Project>{7f1688ae-0e9a-4608-86b0-dadf0441ea4c}</Project>
       <Name>SupplyManager.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupplyManager.Dominio\SupplyManager.Dominio.csproj">
+      <Project>{ea0f32bf-d35b-47f2-9314-24712f1a9bad}</Project>
+      <Name>SupplyManager.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupplyManager.Infra\SupplyManager.Infra.csproj">
+      <Project>{7592bf1e-b2a5-4c22-8921-adc230ba3f21}</Project>
+      <Name>SupplyManager.Infra</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

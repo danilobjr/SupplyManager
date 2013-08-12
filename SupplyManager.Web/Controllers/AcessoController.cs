@@ -1,7 +1,11 @@
 ﻿using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
+using SupplyManager.Comum.Exceptions;
+using SupplyManager.Dominio.Servicos;
+using SupplyManager.Web.Extensions;
 using SupplyManager.Web.Filters;
 using SupplyManager.Web.Models;
+using SupplyManager.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +17,16 @@ using WebMatrix.WebData;
 
 namespace SupplyManager.Web.Controllers
 {
-    [Authorize]
     [InitializeSimpleMembership]
-    public class AcessoController : Controller
+    public class AcessoController : BaseController
     {
+        public UsuarioLoginGerente Gerente { get; set; }
+
+        public AcessoController() : base()
+        {
+            Gerente = new UsuarioLoginGerente(Contexto);
+        }
+
         //
         // GET: /Account/Login
 
@@ -33,16 +43,30 @@ namespace SupplyManager.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginModel model, string returnUrl)
+        public ActionResult Login(UsuarioLoginVM viewModel, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            try
             {
+                Gerente.ValidarLoginESenha(viewModel.Login, viewModel.Senha);
+                var usuarioLogado = Contexto.Usuarios.SingleOrDefault(u => u.Login == viewModel.Login);
+                FormsAuthentication.SetAuthCookie(usuarioLogado.Nome, viewModel.ManterConectado);
                 return RedirectToLocal(returnUrl);
             }
+            catch (RegraDeNegocioException e)
+            {
+                e.CopiarPara(ModelState);
+                viewModel.Mensagem = "Erro";
+                return View(viewModel);
+            }
+
+            //if (ModelState.IsValid && WebSecurity.Login(model.Login, model.Senha, persistCookie: model.ManterConectado))
+            //{
+                //return RedirectToLocal(returnUrl);
+            //}
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
-            return View(model);
+            //ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            //return View(viewModel);
         }
 
         //
@@ -50,9 +74,10 @@ namespace SupplyManager.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult LogOff()
+        public ActionResult Logout()
         {
-            WebSecurity.Logout();
+            //WebSecurity.Logout();
+            FormsAuthentication.SignOut();
 
             return RedirectToAction("Index", "Home");
         }

@@ -9,16 +9,16 @@ namespace SupplyManager.Web.Extensions
 {
     public static class RegraDeNegocioExceptionExtension
     {
-        public static void CopiarPara(this RegraDeNegocioException ex, ModelStateDictionary modelState)
+        public static void CopiarPara(this RegraDeNegocioException e, ModelStateDictionary modelState)
         {
-            CopiarPara(ex, modelState, null);
+            CopiarPara(e, modelState, null);
         }
 
-        public static void CopiarPara(this RegraDeNegocioException ex, ModelStateDictionary modelState, string prefixo)
+        public static void CopiarPara(this RegraDeNegocioException e, ModelStateDictionary modelState, string prefixo)
         {
             prefixo = string.IsNullOrEmpty(prefixo) ? "" : prefixo + ".";
 
-            foreach (var prop in ex.Erros)
+            foreach (var prop in e.Erros)
             {
                 string chave = ExpressionHelper.GetExpressionText(prop.Propriedade);
                 modelState.AddModelError(prefixo + chave, prop.Mensagem);

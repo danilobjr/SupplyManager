@@ -38,7 +38,10 @@
     <div class="loginpanel">
         <div class="loginpanelinner">
             <div class="logo animate0 bounceIn"><img src="/images/logo.png" alt="" /></div>
-            <form id="login" action="dashboard.html" method="post">
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
                 <div class="inputwrapper login-alert">
                     <div class="alert alert-error">Usuário e/ou senha inválidos</div>
                 </div>
@@ -55,9 +58,8 @@
                 @*<div class="inputwrapper animate4 bounceIn">
                     <div class="pull-right">Not a member? <a href="registration.html">Sign Up</a></div>
                     <label><input type="checkbox" class="remember" name="signin" /> Keep me sign in</label>
-                </div>*@
-                
-            </form>
+                </div>*@                
+            }
         </div><!--loginpanelinner-->
     </div><!--loginpanel-->
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+
 namespace SupplyManager.Dominio.Helpers
 {
     public class Util
@@ -24,6 +25,5 @@ namespace SupplyManager.Dominio.Helpers
 			 else
 				 return false;
         }
-
     }
 }

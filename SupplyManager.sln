@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyManager.Dominio", "Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyManager.Comum", "SupplyManager.Comum\SupplyManager.Comum.csproj", "{7F1688AE-0E9A-4608-86B0-DADF0441EA4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyManager.Infra", "SupplyManager.Infra\SupplyManager.Infra.csproj", "{7592BF1E-B2A5-4C22-8921-ADC230BA3F21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupplyManager.AppInsereDados", "SupplyManager.AppInsereDados\SupplyManager.AppInsereDados.csproj", "{9A9E1162-99F6-4016-8DC7-60AF21D2A13E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{7F1688AE-0E9A-4608-86B0-DADF0441EA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F1688AE-0E9A-4608-86B0-DADF0441EA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F1688AE-0E9A-4608-86B0-DADF0441EA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7592BF1E-B2A5-4C22-8921-ADC230BA3F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7592BF1E-B2A5-4C22-8921-ADC230BA3F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7592BF1E-B2A5-4C22-8921-ADC230BA3F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7592BF1E-B2A5-4C22-8921-ADC230BA3F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9E1162-99F6-4016-8DC7-60AF21D2A13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9E1162-99F6-4016-8DC7-60AF21D2A13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9E1162-99F6-4016-8DC7-60AF21D2A13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9E1162-99F6-4016-8DC7-60AF21D2A13E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

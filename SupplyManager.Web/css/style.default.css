@@ -1669,6 +1669,16 @@ blockquote.pull-right { background-position: right 5px; padding: 0 40px 0 0; bor
 .alert-info { border-color: #88c4e2; color: #3a87ad; background: rgb(217,237,247); }
 .alert-info .close, .alert-info h4 { color: #3a87ad; }
 
+.validation-summary-errors {
+    padding: 8px 14px;
+}
+
+.validation-summary-errors span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 pre.prettyprint, .accordion { margin-bottom: 0; }
 dl { margin-bottom: 15px; }
 .input-block-level { min-height: 37px; }
