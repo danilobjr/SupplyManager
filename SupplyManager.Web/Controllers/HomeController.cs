@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace SupplyManager.Web.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : SegurancaBaseController
     {
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 

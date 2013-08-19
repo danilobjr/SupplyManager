@@ -11,6 +11,10 @@ namespace SupplyManager.Dominio
     public interface IDominioContext    
     {
         IDbSet<Usuario> Usuarios { get; }
+        IDbSet<GrupoDeUsuario> GruposDeUsuario { get; }
+        IDbSet<Menu> Menus { get; }
+        IDbSet<NivelDeAcesso> NiveisDeAcesso { get; }
+
         int SaveChanges();
     }
 }

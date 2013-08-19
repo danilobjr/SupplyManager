@@ -18,10 +18,16 @@ namespace SupplyManager.Infra
         }
 
         public IDbSet<Usuario> Usuarios { get; set; }
+        public IDbSet<GrupoDeUsuario> GruposDeUsuario { get; set; }
+        public IDbSet<Menu> Menus { get; set; }
+        public IDbSet<NivelDeAcesso> NiveisDeAcesso { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new UsuarioConfiguration());
+            modelBuilder.Configurations.Add(new UsuarioMapping());
+            modelBuilder.Configurations.Add(new GrupoDeUsuarioMapping());
+            modelBuilder.Configurations.Add(new NivelDeAcessoMapping());
+            modelBuilder.Configurations.Add(new MenuMapping());
         }
     }
 }

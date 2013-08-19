@@ -11,7 +11,7 @@ namespace SupplyManager.Dominio.Servicos
 {
     public class UsuarioGerente
     {
-		IDominioContext ctx;
+		private IDominioContext ctx;
 
 		public UsuarioGerente(IDominioContext ctx)
 		{

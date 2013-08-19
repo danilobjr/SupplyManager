@@ -181,10 +181,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AutoMappers\MenuMapeador.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SegurancaBaseController.cs" />
+    <Compile Include="Extensions\MenuUrlHelperExtension.cs" />
     <Compile Include="Extensions\RegraDeNegocioExceptionExtension.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,9 +195,10 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sessao.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
+    <Compile Include="ViewModels\MenuVM.cs" />
     <Compile Include="ViewModels\UsuarioLoginVM.cs" />
-    <Compile Include="ViewModels\UsuarioVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\animate.delay.css" />

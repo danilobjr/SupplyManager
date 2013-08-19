@@ -13,5 +13,8 @@ namespace SupplyManager.Dominio.Entidades
         public string Email { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
+
+        public int GrupoDeUsuarioId { get; set; }
+        public virtual GrupoDeUsuario GrupoDeUsuario { get; set; }
     }
 }

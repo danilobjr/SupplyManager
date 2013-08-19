@@ -50,6 +50,8 @@ namespace SupplyManager.Web.Controllers
                 Gerente.ValidarLoginESenha(viewModel.Login, viewModel.Senha);
                 var usuarioLogado = Contexto.Usuarios.SingleOrDefault(u => u.Login == viewModel.Login);
                 FormsAuthentication.SetAuthCookie(usuarioLogado.Nome, viewModel.ManterConectado);
+                Sessao.RegistrarUsuarioLogadoEmSessao(usuarioLogado);
+                Sessao.RegistrarMenuDoUsuarioLogadoEmSessao(usuarioLogado.GrupoDeUsuario.NivelDeAcesso.Nivel);
                 return RedirectToLocal(returnUrl);
             }
             catch (RegraDeNegocioException e)

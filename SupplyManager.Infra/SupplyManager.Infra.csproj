@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapeamentos\UsuarioConfiguration.cs" />
+    <Compile Include="Mapeamentos\NivelDeAcessoMapping.cs" />
+    <Compile Include="Mapeamentos\GrupoDeUsuarioMapping.cs" />
+    <Compile Include="Mapeamentos\MenuMapping.cs" />
+    <Compile Include="Mapeamentos\UsuarioMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupplyManagerDbContext.cs" />
   </ItemGroup>
