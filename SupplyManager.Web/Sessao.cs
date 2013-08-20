@@ -3,6 +3,7 @@ using SupplyManager.Dominio.Servicos;
 using SupplyManager.Infra;
 using SupplyManager.Web.AutoMappers;
 using SupplyManager.Web.ViewModels;
+using SupplyManager.Web.ViewModels.Acesso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +13,14 @@ namespace SupplyManager.Web
 {
     class Sessao
     {
-        public static void RegistrarUsuarioLogadoEmSessao(Usuario usuarioLogado)
+        public static void RegistrarUsuarioLogadoEmSessao(UsuarioLogadoVM usuarioLogado)
         {
             HttpContext.Current.Session["UsuarioLogado"] = usuarioLogado;
         }
 
-        public static int ObterUsuarioLogado()
+        public static UsuarioLogadoVM ObterUsuarioLogado()
         {
-            return (int)HttpContext.Current.Session["UsuarioLogado"];
+            return (UsuarioLogadoVM)HttpContext.Current.Session["UsuarioLogado"];
         }
 
         public static void RegistrarMenuDoUsuarioLogadoEmSessao(NumeroNivelDeAcesso numeroNivelDeAcesso)

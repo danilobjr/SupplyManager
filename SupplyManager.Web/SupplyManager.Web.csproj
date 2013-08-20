@@ -181,12 +181,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\AutorizarAttribute.cs" />
     <Compile Include="AutoMappers\MenuMapeador.cs" />
+    <Compile Include="AutoMappers\UsuarioMapeador.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SegurancaBaseController.cs" />
     <Compile Include="Extensions\MenuUrlHelperExtension.cs" />
     <Compile Include="Extensions\RegraDeNegocioExceptionExtension.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -196,9 +198,10 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sessao.cs" />
+    <Compile Include="ViewModels\Acesso\UsuarioLogadoVM.cs" />
+    <Compile Include="ViewModels\Acesso\UsuarioLoginVM.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
     <Compile Include="ViewModels\MenuVM.cs" />
-    <Compile Include="ViewModels\UsuarioLoginVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\animate.delay.css" />
@@ -521,6 +524,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Acesso\Login.cshtml" />
+    <Content Include="Views\Erro\AcessoNaoAutorizado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

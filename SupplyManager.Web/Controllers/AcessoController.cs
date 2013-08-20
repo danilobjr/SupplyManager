@@ -2,10 +2,11 @@
 using Microsoft.Web.WebPages.OAuth;
 using SupplyManager.Comum.Exceptions;
 using SupplyManager.Dominio.Servicos;
+using SupplyManager.Web.AutoMappers;
 using SupplyManager.Web.Extensions;
 using SupplyManager.Web.Filters;
 using SupplyManager.Web.Models;
-using SupplyManager.Web.ViewModels;
+using SupplyManager.Web.ViewModels.Acesso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +51,7 @@ namespace SupplyManager.Web.Controllers
                 Gerente.ValidarLoginESenha(viewModel.Login, viewModel.Senha);
                 var usuarioLogado = Contexto.Usuarios.SingleOrDefault(u => u.Login == viewModel.Login);
                 FormsAuthentication.SetAuthCookie(usuarioLogado.Nome, viewModel.ManterConectado);
-                Sessao.RegistrarUsuarioLogadoEmSessao(usuarioLogado);
+                Sessao.RegistrarUsuarioLogadoEmSessao(UsuarioMapeador.Mapear(usuarioLogado));
                 Sessao.RegistrarMenuDoUsuarioLogadoEmSessao(usuarioLogado.GrupoDeUsuario.NivelDeAcesso.Nivel);
                 return RedirectToLocal(returnUrl);
             }

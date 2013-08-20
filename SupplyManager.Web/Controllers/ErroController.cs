@@ -6,8 +6,11 @@ using System.Web.Mvc;
 
 namespace SupplyManager.Web.Controllers
 {
-    [Authorize]
-    public class SegurancaBaseController : BaseController
+    public class ErroController : Controller
     {
+        public ActionResult AcessoNaoAutorizado()
+        {
+            return View();
+        }
     }
 }
