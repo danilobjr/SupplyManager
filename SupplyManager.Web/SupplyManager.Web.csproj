@@ -409,6 +409,7 @@
     <Content Include="images\loading.gif" />
     <Content Include="images\loading_background.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo_.png" />
     <Content Include="images\menuarrow.png" />
     <Content Include="images\minimize.png" />
     <Content Include="images\next.png" />

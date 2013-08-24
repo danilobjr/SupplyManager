@@ -49,19 +49,23 @@
                     <div class="alert alert-error">Usuário e/ou senha inválidos</div>
                 </div>
                 <div class="inputwrapper">
-                    <input type="text" name="viewModel.Login" id="username" placeholder="Usuário" />
+                    @*<input type="text" name="viewModel.Login" id="username" placeholder="Usuário" />*@
+                    @Html.TextBoxFor(m => m.Login, new { id="username", placeholder="Usuário" })
                 </div>
                 <div class="inputwrapper">
-                    <input type="password" name="viewModel.Senha" id="password" placeholder="Senha" />
+                    @*<input type="password" name="viewModel.Senha" id="password" placeholder="Senha" />*@
+                    @Html.PasswordFor(m => m.Senha, new { id="password", placeholder="Senha" })
                 </div>
                 <div class="inputwrapper">
                     <button name="submit">Entrar</button>
                 </div>
 
-                @*<div class="inputwrapper animate4 bounceIn">
-                    <div class="pull-right">Not a member? <a href="registration.html">Sign Up</a></div>
-                    <label><input type="checkbox" class="remember" name="signin" /> Keep me sign in</label>
-                </div>*@                
+                @*<div class="inputwrapper animate4 bounceIn">*@
+                <div class="inputwrapper">
+                    @*<div class="pull-right">Not a member? <a href="registration.html">Sign Up</a></div>
+                    <label><input type="checkbox" class="remember" name="viewModel.ManterConectado" /> Mantenha-me conectado</label>*@
+                    <label>@Html.CheckBoxFor(m => m.ManterConectado) Mantenha-me conectado</label>
+                </div>
             }
         </div><!--loginpanelinner-->
     </div><!--loginpanel-->

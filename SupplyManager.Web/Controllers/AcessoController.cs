@@ -82,7 +82,7 @@ namespace SupplyManager.Web.Controllers
             //WebSecurity.Logout();
             FormsAuthentication.SignOut();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Acesso");
         }
 
         //
