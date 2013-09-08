@@ -13,16 +13,6 @@ namespace SupplyManager.Infra.Mapeamentos
         public UsuarioMapping()
         {
             ToTable("Usuarios");
-
-            //HasKey(u => u.Id);
-
-            //Property(u => u.Id).HasColumnName("Id").IsRequired();
-            //Property(u => u.Nome).HasColumnName("Nome").HasMaxLength(100).IsRequired();
-            //Property(u => u.Email).HasColumnName("Email").HasMaxLength(100).IsRequired();
-            //Property(u => u.Login).HasColumnName("Login").HasMaxLength(100).IsRequired();
-            //Property(u => u.Senha).HasColumnName("Senha").HasMaxLength(100).IsRequired();
-
-            //HasRequired(u => u.GrupoDeUsuario).WithMany(g => g.Usuarios).HasForeignKey(u => u.GrupoDeUsuarioId);
         }
     }
 }

@@ -8,7 +8,17 @@ namespace SupplyManager.Web.Controllers
 {
     public class ErroController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult AcessoNaoAutorizado()
+        {
+            return View();
+        }
+
+        public ActionResult RecursoNaoEncontrado()
         {
             return View();
         }

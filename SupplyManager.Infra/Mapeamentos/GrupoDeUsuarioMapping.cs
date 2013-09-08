@@ -13,13 +13,6 @@ namespace SupplyManager.Infra.Mapeamentos
         public GrupoDeUsuarioMapping()
         {
             ToTable("GruposDeUsuario");
-
-            //HasKey(u => u.Id);
-
-            //Property(u => u.Id).HasColumnName("Id").IsRequired();
-            //Property(u => u.Descricao).HasColumnName("Descricao").HasMaxLength(100).IsRequired();
-
-            //HasMany(g => g.Usuarios).WithRequired(u => u.GrupoDeUsuario).HasForeignKey(g => g.GrupoDeUsuarioId);
         }
     }
 }

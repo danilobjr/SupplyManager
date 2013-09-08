@@ -1,18 +1,18 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutErro.cshtml";
-    ViewBag.Title = "Acesso Nao Autorizado";
+    ViewBag.Title = "Recurso Não Encontrado";
 }
 
 @section tituloPagina {
-    <h5>HTTP Status 401</h5>
-    <h1>Acesso Não Autorizado</h1>
+    <h5>HTTP Status 404</h5>
+    <h1>Recurso Não Encontrado</h1>
 }
 
 <div class="errortitle">
-    <h4 class="animate0 fadeInUp">Você não tem permissão para visualizar este conteúdo.</h4>
+    <h4 class="animate0 fadeInUp">O conteúdo que você procura não foi encontrado.</h4>
     <span class="animate1 bounceIn">4</span>
     <span class="animate2 bounceIn">0</span>
-    <span class="animate3 bounceIn">1</span>
+    <span class="animate3 bounceIn">4</span>
     <div class="errorbtns animate4 fadeInUp">
         <a onclick="history.back()" class="btn btn-primary btn-large">Ir para Página Anterior</a>
         <a href="/home/index" class="btn btn-large">Ir para Home</a>

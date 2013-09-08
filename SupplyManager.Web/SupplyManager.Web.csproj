@@ -499,7 +499,9 @@
     <Content Include="js\tinymce\jquery.flot.symbol.min.js" />
     <Content Include="js\ui.spinner.min.js" />
     <Content Include="js\wysiwyg.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -526,6 +528,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Acesso\Login.cshtml" />
     <Content Include="Views\Erro\AcessoNaoAutorizado.cshtml" />
+    <Content Include="Views\Shared\_LayoutErro.cshtml" />
+    <Content Include="Views\Erro\RecursoNaoEncontrado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
